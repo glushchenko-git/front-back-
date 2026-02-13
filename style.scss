@@ -1,0 +1,64 @@
+// ======================
+// 1. ПЕРЕМЕННЫЕ (минимум 2)
+// ======================
+$primary-color: #3498db;       // Основной цвет (для кнопки и акцентов)
+$secondary-color: #2c3e50;      // Цвет текста заголовка
+$border-radius: 12px;           // Переменная для скругления (третья, для крутости)
+
+// ======================
+// 2. МИКСИН (для кнопки)
+// ======================
+// Принимает цвет фона и цвет текста, задаёт базовые стили кнопки
+@mixin button-style($bg-color, $text-color: white) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: $border-radius;  // используем переменную
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    // Эффект при наведении (чуть темнее)
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+// ======================
+// 3. СТИЛИ КАРТОЧКИ (с вложенностью)
+// ======================
+.product-card {
+    width: 300px;
+    border: 1px solid #eee;
+    border-radius: $border-radius;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    // Вложенность для элементов (BEM)
+    &__image {
+        width: 100%;
+        border-radius: $border-radius;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        color: $secondary-color;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    &__description {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        // Используем миксин. Передаём основной цвет, текст будет белым (по умолчанию)
+        @include button-style($primary-color);
+        width: 100%;
+    }
+}
