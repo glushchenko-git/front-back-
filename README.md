@@ -81,7 +81,7 @@ html
 </head>
 <body>
     <div class="card">
-        <img src="https://avatars.mds.yandex.net/get-marketpic/9048107/pic1d31ac74dde055ba63b633659615dc22/orig" alt="https://avatars.mds.yandex.net/get-marketpic/9048107/pic1d31ac74dde055ba63b633659615dc22/orig" class="card__image">
+        <img src="фото" alt="фото" class="card__image">
         <h2 class="card__title">POCO MOCO</h2>
         <p class="card__description">Современный смартфон с отличной камерой и мощным процессором.</p>
         <a href="#" class="card__btn">Купить</a>
