@@ -228,4 +228,4 @@ SASS значительно упрощает процесс стилизации
 
 6. Ссылка на репозиторий
 
-https://github.com/tvthietkeweb/product-card-sass
+https://github.com/glushchenko-git/front-back-
